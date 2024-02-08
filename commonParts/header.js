@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
     const body = document.querySelector("body");
+    const basket = document.getElementById('basket');
+    const orders = document.getElementById('orders');
+    const main = document.getElementById('main');
     let token = localStorage.getItem("token");
     let basketVolume;
     
@@ -10,19 +13,29 @@ $(document).ready(function () {
 
     let headerPath = '';
     let authorizationPath = '';
-    let regPath = '';
+    let basketPath = '';
+    let ordersPath = '';
+    let mainPath = '#';
 
     if (currentPageFileName === 'delivery') {
         headerPath = 'commonParts/header.html';
         authorizationPath='authorization/index.html'
         regPath='reg/index.html'
+        basketPath='basket/index.html'
+        ordersPath='orders/index.html'
     } else {
         headerPath = '../commonParts/header.html';
         authorizationPath='../authorization/index.html'
         regPath='../reg/index.html'
-
+        basketPath='../basket/index.html'
+        ordersPath='../orders/index.html'
+        mainPath='../index.html'
     }
-    console.log( authorizationPath, regPath, currentPage);
+
+    basket.setAttribute('href', basketPath);
+    orders.setAttribute('href', ordersPath);
+    main.setAttribute('href', mainPath);
+    console.log( authorizationPath, regPath, currentPage, currentPageFileName);
 
     const headerPromise = new Promise((resolve, reject) => {
         $.get(headerPath, function (header) {
