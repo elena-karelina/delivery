@@ -152,7 +152,7 @@ $(document).ready(function () {
                 if (response.ok) {
                     console.log("logout");
                     localStorage.removeItem('token');
-                    window.location.href = "../index.html"
+                    window.location.href = mainPath;
                 }
                 else {
                     alert("Ошибка: " + response.status);
