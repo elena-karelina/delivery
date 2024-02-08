@@ -15,6 +15,7 @@ $(document).ready(function () {
     let basketPath = '';
     let ordersPath = '';
     let mainPath = '#';
+    let mailPath = '';
 
     if (currentPageFileName === 'delivery') {
         headerPath = 'commonParts/header.html';
@@ -22,6 +23,7 @@ $(document).ready(function () {
         regPath='reg/index.html'
         basketPath='basket/index.html'
         ordersPath='orders/index.html'
+        mailPath='profile/index.html'
     } else {
         headerPath = '../commonParts/header.html';
         authorizationPath='../authorization/index.html'
@@ -29,6 +31,7 @@ $(document).ready(function () {
         basketPath='../basket/index.html'
         ordersPath='../orders/index.html'
         mainPath='../index.html'
+        mailPath='../profile/index.html'
     }
     console.log( 1);
 
@@ -56,9 +59,11 @@ $(document).ready(function () {
         const basket = document.getElementById('basket');
         const orders = document.getElementById('orders');
         const main = document.getElementById('main');
+        const mail = document.getElementById('mail');
         basket.setAttribute('href', basketPath);
         orders.setAttribute('href', ordersPath);
         main.setAttribute('href', mainPath);
+        mail.setAttribute('href', mailPath);
 
         if (token == null) {
             $('#mail').addClass("d-none");
