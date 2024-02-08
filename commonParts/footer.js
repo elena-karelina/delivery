@@ -15,7 +15,7 @@ $(document).ready(function () {
     }
 
     const footerPromise = new Promise((resolve, reject) => {
-        $.get('commonParts/footer.html', function (footer) {
+        $.get(headerPath, function (footer) {
             resolve(footer);
         }).fail(function () {
             reject("Ошибка при загрузке footer.html");

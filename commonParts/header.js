@@ -1,5 +1,5 @@
 $(document).ready(function () {
- 
+
     const body = document.querySelector("body");
     let token = localStorage.getItem("token");
     let basketVolume;
@@ -18,9 +18,10 @@ $(document).ready(function () {
         regPath='../reg/index.html'
     } else {
         headerPath = 'commonParts/header.html';
-        authorizationPath='.authorization/index.html'
+        authorizationPath='authorization/index.html'
         regPath='reg/index.html'
     }
+    console.log( authorizationPath, regPath, currentPage);
 
     const headerPromise = new Promise((resolve, reject) => {
         $.get(headerPath, function (header) {
