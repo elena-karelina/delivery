@@ -5,13 +5,13 @@ $(document).ready(function () {
     const currentPage = window.location.href;
     const currentPageArray = currentPage.split('/');
     const currentPageFileName = currentPageArray[currentPageArray.length - 2];
-    
+    console.log(currentPageFileName);
     let headerPath = '';
     
     if (currentPageFileName === 'delivery') {
-        headerPath = '../commonParts/footer.html';
-    } else {
         headerPath = 'commonParts/footer.html';
+    } else {
+        headerPath = '../commonParts/footer.html';
     }
 
     const footerPromise = new Promise((resolve, reject) => {

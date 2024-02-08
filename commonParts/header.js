@@ -13,13 +13,14 @@ $(document).ready(function () {
     let regPath = '';
 
     if (currentPageFileName === 'delivery') {
-        headerPath = '../commonParts/header.html';
-        authorizationPath='../authorization/index.html'
-        regPath='../reg/index.html'
-    } else {
         headerPath = 'commonParts/header.html';
         authorizationPath='authorization/index.html'
         regPath='reg/index.html'
+    } else {
+        headerPath = '../commonParts/header.html';
+        authorizationPath='../authorization/index.html'
+        regPath='../reg/index.html'
+
     }
     console.log( authorizationPath, regPath, currentPage);
 
