@@ -1,12 +1,10 @@
 $(document).ready(function () {
 
+
     const body = document.querySelector("body");
-    const basket = document.getElementById('basket');
-    const orders = document.getElementById('orders');
-    const main = document.getElementById('main');
     let token = localStorage.getItem("token");
     let basketVolume;
-    
+
     const currentPage = window.location.href;
     const currentPageArray = currentPage.split('/');
     const currentPageFileName = currentPageArray[currentPageArray.length - 2];
@@ -32,11 +30,9 @@ $(document).ready(function () {
         ordersPath='../orders/index.html'
         mainPath='../index.html'
     }
+    console.log( 1);
 
-    basket.setAttribute('href', basketPath);
-    orders.setAttribute('href', ordersPath);
-    main.setAttribute('href', mainPath);
-    
+
     console.log( authorizationPath, regPath, currentPage, currentPageFileName);
 
     const headerPromise = new Promise((resolve, reject) => {
@@ -47,6 +43,7 @@ $(document).ready(function () {
         });
     });
     
+
     headerPromise.then(function (header) {
         const parser = new DOMParser();
         const headerDocument = parser.parseFromString(header, 'text/html');
@@ -56,6 +53,12 @@ $(document).ready(function () {
         const registerButton = document.getElementById("register");
         const loginButton = document.getElementById("login");
         const logoutButton = document.getElementById("logout");
+        const basket = document.getElementById('basket');
+        const orders = document.getElementById('orders');
+        const main = document.getElementById('main');
+        basket.setAttribute('href', basketPath);
+        orders.setAttribute('href', ordersPath);
+        main.setAttribute('href', mainPath);
 
         if (token == null) {
             $('#mail').addClass("d-none");
