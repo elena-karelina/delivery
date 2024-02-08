@@ -9,11 +9,17 @@ $(document).ready(function () {
     const currentPageFileName = currentPageArray[currentPageArray.length - 1];
 
     let headerPath = '';
+    let authorizationPath = '';
+    let regPath = '';
 
     if (currentPageFileName === 'index.html') {
         headerPath = '../commonParts/header.html';
+        authorizationPath='../authorization/index.html'
+        regPath='../reg/index.html'
     } else {
         headerPath = 'commonParts/header.html';
+        authorizationPath='.authorization/index.html'
+        regPath='reg/index.html'
     }
 
     const headerPromise = new Promise((resolve, reject) => {
@@ -51,11 +57,11 @@ $(document).ready(function () {
         }
     
         registerButton.addEventListener("click", function () {
-            window.location.href = "../reg/index.html"
+            window.location.href = regPath
         });
     
         loginButton.addEventListener("click", function () {
-            window.location.href = "../authorization/index.html"
+            window.location.href = authorizationPath
         });
     
         logoutButton.addEventListener("click", function () {
@@ -87,7 +93,7 @@ $(document).ready(function () {
                 alert("Ошибка: " + response.status);
                 if (response.status == 401) {
                     localStorage.removeItem('token');
-                    window.location.href = "../authorization/index.html"
+                    window.location.href = authorizationPath;
                 }
             }
             else {
@@ -145,7 +151,7 @@ $(document).ready(function () {
             });
             if (response.status == 401) {
                 localStorage.removeItem('token');
-                window.location.href = "../authorization/index.html"
+                window.location.href = authorizationPath;
 
             }
             else {
