@@ -13,6 +13,7 @@ $(document).ready(function () {
 
     let headerPath = '';
     let authorizationPath = '';
+    let regPath = '';
     let basketPath = '';
     let ordersPath = '';
     let mainPath = '#';
@@ -35,6 +36,7 @@ $(document).ready(function () {
     basket.setAttribute('href', basketPath);
     orders.setAttribute('href', ordersPath);
     main.setAttribute('href', mainPath);
+    
     console.log( authorizationPath, regPath, currentPage, currentPageFileName);
 
     const headerPromise = new Promise((resolve, reject) => {
