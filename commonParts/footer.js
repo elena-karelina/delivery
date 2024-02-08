@@ -4,14 +4,14 @@ $(document).ready(function () {
 
     const currentPage = window.location.href;
     const currentPageArray = currentPage.split('/');
-    const currentPageFileName = currentPageArray[currentPageArray.length - 1];
+    const currentPageFileName = currentPageArray[currentPageArray.length - 2];
     
     let headerPath = '';
     
-    if (currentPageFileName === 'index.html') {
-      headerPath = '../commonParts/footer.html';
+    if (currentPageFileName === 'delivery') {
+        headerPath = '../commonParts/footer.html';
     } else {
-      headerPath = 'commonParts/footer.html';
+        headerPath = 'commonParts/footer.html';
     }
 
     const footerPromise = new Promise((resolve, reject) => {

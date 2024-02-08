@@ -6,13 +6,13 @@ $(document).ready(function () {
     
     const currentPage = window.location.href;
     const currentPageArray = currentPage.split('/');
-    const currentPageFileName = currentPageArray[currentPageArray.length - 1];
+    const currentPageFileName = currentPageArray[currentPageArray.length - 2];
 
     let headerPath = '';
     let authorizationPath = '';
     let regPath = '';
 
-    if (currentPageFileName === 'index.html') {
+    if (currentPageFileName === 'delivery') {
         headerPath = '../commonParts/header.html';
         authorizationPath='../authorization/index.html'
         regPath='../reg/index.html'
