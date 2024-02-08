@@ -1,0 +1,36 @@
+@media (max-width: 575px) {
+    #basket-info {
+        margin-bottom: 15px !important;
+
+    }
+}
+
+div.order button {
+    right: 15px;
+    top: 15px;
+}
+
+div.order p.order-cost {
+    right: 15px;
+    bottom: 15px;
+}
+
+@media (max-width: 650px) {
+    div.order button {
+        position: static !important;
+        margin-top: 15px !important;
+    }
+
+    div.order p.order-cost {
+        position: static !important;
+    }
+
+    .order {
+        position: static !important;
+    }
+
+    .button {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

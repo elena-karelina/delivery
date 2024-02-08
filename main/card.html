@@ -1,0 +1,30 @@
+ <form class="col my-1">
+    <div class="card px-0 h-100">
+        <div class="position-relative photo">
+            <img src="{{src}}" class="card-img-top foto" alt="изображение блюда">
+            <img src="veg.png" class="veg position-absolute d-none" alt="вегетарианское блюдо">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <span>Категория блюда: <span class="category">{{type}}</span></span>
+            <div class="rating border rounded text-center my-1">
+                <div class="wrapper">
+                    <div class="rating-body">
+                        <div class="rating-active"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="card-text">{{description}}</p>
+            
+        </div>
+        <div class="card-footer form-inline">
+            <span class="text-muted col">Цена <span class="price">{{cost}}</span> руб</span>
+            <button class="btn btn-primary btn-sm toBasket" form="{{id}}">В корзину</button>
+            <div class="number d-none" data-step="1" data-min="1" data-max="100">
+                <input class="number-text" type="text" name="count" value="1" old-value="1">
+                <a class="number-minus" href="#">−</a>
+                <a class="number-plus" href="#">+</a>
+            </div>
+        </div>
+    </div>
+</form>

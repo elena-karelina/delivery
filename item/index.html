@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru"  class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="icon" href="../pizza_3595455.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column h-100">
+   
+    <main class="flex-shrink-0">
+        <div class="col col-sm-11 col-md-10  col-xl-8 mx-auto my-4 py-4 shadow">
+            <form class="col my-1" id="1">
+                <div class="card px-0" id="card">
+                    <div class="foto position-relative mx-auto mt-3">
+                        <img src="/" class="card-img-top" id="foto" alt="изображение блюда">
+                        <img src="../veg.png" class="veg position-absolute d-none" id="vegFoto" alt="вегетерианское блюдо">
+                    </div>
+                    <div class="card-body">
+                        <h1 id="card-title"></h1>
+                        <span>Категория блюда: <span id="category"></span> </span>
+                        <br><span id="veg"></span>
+                        <div class="rating border rounded text-center my-1">
+                            <div class="wrapper">
+                                <div id="ratingBody">
+                                    <div id="ratingActive">
+                                    </div>
+                                    <div id="ratingItems">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="card-text mt-2" id="description"></p>
+                        <div class="wrapper d-none" id="rating">
+                            <div class="rating mb-3 border rounded py-1 px-3 ">
+                                <p class="mr-2 my-auto">Оставьте свою оценку:  </p>
+                                <div class="rating-area">
+                                    <input type="radio" id="star-10" name="rating" value="10">
+                                    <label for="star-10" title="Оценка «10»"></label>	
+                                    <input type="radio" id="star-9" name="rating" value="9">
+                                    <label for="star-9" title="Оценка «9»"></label>    
+                                    <input type="radio" id="star-8" name="rating" value="8">
+                                    <label for="star-8" title="Оценка «8»"></label>  
+                                    <input type="radio" id="star-7" name="rating" value="7">
+                                    <label for="star-7" title="Оценка «7»"></label>
+                                    <input type="radio" id="star-6" name="rating" value="6">
+                                    <label for="star-6" title="Оценка «6»"></label>	    
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Оценка «5»"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Оценка «4»"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Оценка «3»"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Оценка «2»"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Оценка «1»"></label>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm ml-3" id="rating-button">Оценить</button>                               
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                
+
+
+                    <div class="card-footer form-inline ">
+                        <span class="text-muted col">Цена <span id="price"></span> руб</span>
+
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script  src="../commonParts/header.js"></script>
+        <script src="script.js"></script>
+        <script src="../commonParts/footer.js"></script>
+</body>
+
+</html>
